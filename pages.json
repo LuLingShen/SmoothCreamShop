@@ -1,0 +1,103 @@
+{
+	// 标准的JSON文件禁止出现注释，但是uni-app中的可以
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				//取消默认的标题栏，使用自定义标题栏
+				// "navigationStyle": "default",  //默认标题栏
+				"navigationStyle": "custom",
+				//启用下拉刷新吗？默认值是false
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/search/search",
+			"style": {
+				//导航条样式：自定义标题栏
+				"navigationStyle": "custom",
+				//启用下拉刷新吗？默认值是false
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/category/category",
+			"style": {
+				//导航栏标题文本
+				"navigationBarTitleText": "商品分类",
+				//启用下拉刷新吗？
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/brands/brands",
+			"style": {
+				//导航栏标题文本
+				"navigationBarTitleText": "品牌馆",
+				//启用下拉刷新吗？
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/list/list",
+			"style": {
+				//后续此处的标题会被程序覆盖掉
+				"navigationBarTitleText": "商品列表",
+				"enablePullDownRefresh": true
+			}
+		},{
+			"path": "pages/details/details",
+			"style": {
+				//后续此处的标题会被程序覆盖掉
+				"navigationBarTitleText": "商品详情",
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/userCenter/userCenter",
+			"style": {
+				//后续此处的标题会被程序覆盖掉
+				"navigationBarTitleText": "用户中心",
+				"enablePullDownRefresh": false
+			}
+		}
+	],
+	//全局样式，作用于所有页面
+	"globalStyle": {
+		//导航条标题栏文字颜色： white/black
+		"navigationBarTextStyle": "white",
+		//导航条标题文本
+		"navigationBarTitleText": "学子商城",
+		//导航条背景颜色
+		"navigationBarBackgroundColor": "#0AA1ED",
+		//只有小程序中：当前页面下拉后，露出的底色
+		"backgroundColor": "#F8F8F8"
+	},
+	//页签栏
+	"tabBar": {
+		"color": "#999",				//文字颜色(未选中时)
+		"selectedColor": "#0aa1ed",		//文字颜色(选中状态)
+		"list": [
+			{
+				"iconPath": "static/img/home.png",  //图标路径(未选中时)
+				"selectedIconPath": "static/img/home_active.png",  //图标路径(选中时)
+				"text": "首页",	//文本
+				"pagePath": "pages/index/index" //点击页面时跳转到的页面的路径
+			},
+			{
+				"iconPath": "static/img/brand.png",  //图标路径(未选中时)
+				"selectedIconPath": "static/img/brand_active.png",  //图标路径(选中时)
+				"text": "品牌馆",	//文本
+				"pagePath": "pages/brands/brands" //点击页面时跳转到的页面的路径
+			},
+			{
+				"iconPath": "static/img/category.png",  //图标路径(未选中时)
+				"selectedIconPath": "static/img/category_active.png",  //图标路径(选中时)
+				"text": "商品分类",	//文本
+				"pagePath": "pages/category/category" //点击页面时跳转到的页面的路径
+			},
+			{
+				"iconPath": "static/img/user.png",  //图标路径(未选中时)
+				"selectedIconPath": "static/img/user_active.png",  //图标路径(选中时)
+				"text": "用户中心",	//文本
+				"pagePath": "pages/userCenter/userCenter" //点击页面时跳转到的页面的路径
+			}
+		]
+	},
+	"uniIdRouter": {}
+}
